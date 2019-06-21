@@ -112,7 +112,7 @@
                 android:id="@+id/comment_icon"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/comment-icon-png-18"
+                android:src="@drawable/comment_icon_png_18"
                 android:scaleType="centerCrop"
                 />
 

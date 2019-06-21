@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_compass"
+        android:title="compass"
+        android:icon="@drawable/compass_nav_unfilled"/>
+
+    <item android:id="@+id/nav_bar_chart"
+        android:title="Bar Chart"
+        android:icon="@drawable/bar_chart_nav_unfilled"/>
+
+    <item android:id="@+id/nav_notification"
+        android:title="Notification"
+        android:icon="@drawable/notification_nav_unfilled"/>
+
+    <item android:id="@+id/nav_edit_profile"
+        android:title="Edit Profile"
+        android:icon="@drawable/edit_profile_nav_unfilled"
+        />
+
+
+
+</menu>
