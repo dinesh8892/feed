@@ -53,16 +53,14 @@
         android:orientation="vertical"
         android:background="@drawable/background">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/post_list"
+        <FrameLayout
+            android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_weight="1"
             >
+        </FrameLayout>
 
-        </android.support.v7.widget.RecyclerView>
 
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/navigation_bottom"
@@ -70,7 +68,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:background="?android:attr/windowBackground"
-            app:menu="@menu/navigation_bottom_items">
+            app:menu="@menu/navigation_bottom_items"
+            app:labelVisibilityMode="unlabeled">
 
         </android.support.design.widget.BottomNavigationView>
 

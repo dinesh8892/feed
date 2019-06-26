@@ -1,9 +1,13 @@
 package com.example.feed;
 
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import retrofit2.Call;
@@ -12,33 +16,48 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    RecyclerView recyclerView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = findViewById(R.id.post_list);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        BottomNavigationView bottomNavigationView = findViewById(R.id.navigation_bottom);
+        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 
-        getData();
+        if (savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new DashboardFragment()).commit();
+        }
+
     }
 
-    private void getData(){
-        Call<PostList> postList = BloggerApi.getService().getPostList();
-        postList.enqueue(new Callback<PostList>() {
-            @Override
-            public void onResponse(Call<PostList> call, Response<PostList> response) {
-                PostList list = response.body();
-                recyclerView.setAdapter(new PostAdapter(MainActivity.this, list.getItems()));
-                Toast.makeText(MainActivity.this, "Success", Toast.LENGTH_SHORT).show();
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            Fragment selectedFragment = null;
+
+            switch (menuItem.getItemId()){
+
+                case R.id.nav_compass:
+                    selectedFragment = new DashboardFragment();
+                    break;
+                case R.id.nav_bar_chart:
+                    selectedFragment = new ProgressFragment();
+                    break;
+                case R.id.nav_notification:
+                    selectedFragment = new NotificationFragment();
+                    break;
+                case R.id.nav_edit_profile:
+                    selectedFragment = new EditProfileFragment();
+                    break;
             }
 
-            @Override
-            public void onFailure(Call<PostList> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "Failed" + t.getMessage(), Toast.LENGTH_LONG).show();
-            }
-        });
-    }
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    selectedFragment).commit();
+
+            return true;
+
+        }
+    };
+
 }
