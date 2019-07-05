@@ -48,8 +48,10 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         postViewHolder.post_description.setText(document.text());
 
         Elements elements = document.select("img");
-        Glide.with(context).load(elements.get(0).attr("src")).into(postViewHolder.post_image);
-
+        if (elements.size() != 0) {
+            postViewHolder.post_image.setVisibility(View.VISIBLE);
+            Glide.with(context).load(elements.get(0).attr("src")).into(postViewHolder.post_image);
+        }
         Author author = item.getAuthor();
         postViewHolder.trainer_name.setText(author.getDisplayName());
     }
