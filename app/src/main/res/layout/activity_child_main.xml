@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="172dp"
-        android:background="@color/colorPrimary"
+        android:background="#FFDF00"
         android:padding="16dp">
 
         <ImageView
@@ -22,7 +22,8 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:src="@drawable/contactplaceholder" />
+            android:src="@drawable/contactplaceholder"
+            />
 
         <TextView
             android:id="@+id/name"
@@ -43,32 +44,64 @@
             android:layout_below="@+id/name"
             android:layout_toEndOf="@+id/profile_pic_top"
             android:layout_toRightOf="@+id/profile_pic_top"
-            android:text="id:133395793" />
+            android:text="id:133395793"
+            />
 
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/cbkground"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/childfeed_bkground">
 
         <FrameLayout
-            android:id="@+id/fragment_container"
+            android:id="@+id/child_fragment_container"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            >
+        </FrameLayout>
 
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/navigation_bottom"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="?android:attr/windowBackground"
-            app:labelVisibilityMode="unlabeled"
-            app:menu="@menu/navigation_bottom_items">
+            android:layout_height="140dp"
+            android:background="@drawable/custom_nav_bottom">
 
-        </android.support.design.widget.BottomNavigationView>
+            <ImageView
+                android:id="@+id/child_dashboard_nav_bottom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/dashboard_icon_child"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="4dp"
+                />
+
+            <ImageView
+                android:id="@+id/child_game_nav_bottom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/game_icon"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                />
+
+            <ImageView
+                android:id="@+id/child_notification_nav_bottom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/notification_icon_child"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="4dp"
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
 
