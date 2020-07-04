@@ -1,8 +1,8 @@
 package com.example.feed;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -12,8 +12,8 @@ public class childMain_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_child_main);
 
-        /**if (savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+        if (savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction().replace(R.id.child_fragment_container,
                     new childDashboard_fragment()).commit();
         }
 
@@ -42,7 +42,7 @@ public class childMain_Activity extends AppCompatActivity {
                 getSupportFragmentManager().beginTransaction().replace(R.id.child_fragment_container,
                         new childNotification_fragment()).commit();
             }
-        });**/
+        });
 
     }
 }

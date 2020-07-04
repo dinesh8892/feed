@@ -12,4 +12,5 @@
     <string name="enroll">Enroll now</string>
     <string name="no_of_children">No of Children</string>
     <string name="your_query">Your query?</string>
+    <string name="default_notification_channel_id">default</string>
 </resources>
