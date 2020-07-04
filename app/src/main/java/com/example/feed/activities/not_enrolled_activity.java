@@ -1,10 +1,12 @@
-package com.example.feed;
+package com.example.feed.activities;
 
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.feed.R;
 
 public class not_enrolled_activity extends AppCompatActivity {
     @Override

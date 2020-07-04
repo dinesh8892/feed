@@ -12,19 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".not_enrolled_activity"/>
-        <activity android:name=".activities_rating"/>
-        <activity android:name=".SignUpActivity">
+        <activity android:name=".activities.not_enrolled_activity"/>
+        <activity android:name=".activities.activities_rating"/>
+        <activity android:name=".activities.SignUpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".childMain_Activity"/>
+        <activity android:name=".activities.MainActivity"/>
+        <activity android:name=".activities.childMain_Activity"/>
         <service
-            android:name=".MessagingService"
+            android:name=".service.MessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

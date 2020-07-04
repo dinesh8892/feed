@@ -1,10 +1,15 @@
-package com.example.feed;
+package com.example.feed.activities;
 
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.example.feed.R;
+import com.example.feed.fragment.childDashboard_fragment;
+import com.example.feed.fragment.childGame_fragment;
+import com.example.feed.fragment.childNotification_fragment;
 
 public class childMain_Activity extends AppCompatActivity {
     @Override

@@ -1,4 +1,4 @@
-package com.example.feed;
+package com.example.feed.Adapters;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
@@ -10,6 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.feed.R;
+import com.example.feed.model.Author;
+import com.example.feed.model.Item;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

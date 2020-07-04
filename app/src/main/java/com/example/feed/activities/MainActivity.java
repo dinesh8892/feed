@@ -1,5 +1,10 @@
-package com.example.feed;
+package com.example.feed.activities;
 
+import com.example.feed.fragment.DashboardFragment;
+import com.example.feed.fragment.EditProfileFragment;
+import com.example.feed.fragment.NotificationFragment;
+import com.example.feed.fragment.ProgressFragment;
+import com.example.feed.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;

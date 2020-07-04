@@ -1,5 +1,5 @@
 
-package com.example.feed;
+package com.example.feed.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
